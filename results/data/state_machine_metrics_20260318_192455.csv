@@ -1,0 +1,2 @@
+mean_position_error,max_position_error,final_position_error,steady_state_error,mean_heading_error,max_heading_error,total_simulation_time,settling_time,path_length,reference_path_length,path_efficiency,goal_reached,num_data_points
+0.061149663585956346,0.1835767349812669,0.47299025670366407,0.031786800177812095,3.5436690553635,15.876570993594333,24.900000000000002,16.45,11.457500000000001,12.141208622431598,94.36869389454024,True,499

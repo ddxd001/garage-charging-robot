@@ -19,10 +19,6 @@ ENV/
 *~
 .DS_Store
 
-# 仿真结果文件（可选择性上传）
-results/
-*.png
-*.csv
 
 # Jupyter Notebook
 .ipynb_checkpoints
