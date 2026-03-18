@@ -75,10 +75,13 @@ garage_charging_robot/
 ├── run_demo.py              # 一键演示脚本 ⭐
 ├── run_experiment.py        # 参数对比实验
 ├── run_with_state_machine.py # 状态机演示
-├── main.py                  # 标准仿真入口
-├── README_CN.md             # 中文说明（本文档）
-├── README.md                # 英文说明
-└── README_DEMO.md           # 竞赛展示文档
+├── clean_results.py         # 清理结果脚本
+├── README.md                # 项目说明（本文档）
+├── README_DEMO.md           # 竞赛展示文档
+├── CONTRIBUTORS.md          # 团队成员信息
+├── SETUP.md                 # 环境配置指南
+├── requirements.txt         # Python依赖列表
+└── environment.yml          # Conda环境配置
 ```
 
 ---
@@ -121,16 +124,17 @@ python run_with_state_machine.py
 - 状态日志记录
 - 多阶段速度控制
 
-### 4. 标准仿真
+### 4. 清理实验结果
 
 ```bash
-python main.py
+python clean_results.py
 ```
 
 **功能**：
-- 基础路径跟踪仿真
-- 详细的误差分析
-- 多种可视化图表
+- 一键清除所有仿真结果文件
+- 清理 Python 缓存文件
+- 保留目录结构
+- 显示释放的磁盘空间
 
 ---
 
