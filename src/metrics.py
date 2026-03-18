@@ -56,8 +56,8 @@ class PerformanceMetrics:
     - reference_path_length: Length of the reference path (m)
       Baseline for path efficiency comparison
     
-    - path_efficiency: Ratio of reference path to actual path (%)
-      100% means perfect path following, <100% means deviation
+    - path_efficiency: Ratio of actual path to reference path (%)
+      100% means perfect path following, >100% means deviation
     
     - settling_time: Time to reach and stay within error threshold (s)
       Indicates convergence speed
@@ -174,10 +174,11 @@ class MetricsCalculator:
             reference_path[:, 0], reference_path[:, 1]
         )
         
-        # Path efficiency
-        if metrics.path_length > 0:
+        # Path efficiency (actual/reference * 100)
+        # 100% = perfect following, >100% = longer path (deviation)
+        if metrics.reference_path_length > 0:
             metrics.path_efficiency = float(
-                (metrics.reference_path_length / metrics.path_length) * 100
+                (metrics.path_length / metrics.reference_path_length) * 100
             )
         
         return metrics
